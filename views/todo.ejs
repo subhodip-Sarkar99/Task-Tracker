@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<div class="user-btns">
+    <button id="make-todo" onclick="showDiv()">Create New </button> 
+    <a href="/view-my-todo" id="view-todo">View All</a>
+    <a href="/logout">Logout</a>
+    
+</div>
+
+
+<div id="createtodo" hidden>
+    <div class="conatiner-todo">
+        
+        <button id="txt-btn" class="btn" onclick="createInp()">New Task</button>
+        
+        <form action="/post-todo" method="POST" id="newTask">
+            <input type="text" name="todoHeading" placeholder="Title..." id="headtodo">
+        <button id="submit-todos" class="btn" onclick="submitTodo()" name="submitBtn">Submit</button>
+            
+            
+        </form>
+    </div>
+
+</div>
+
+
+<%- include("partials/footer.ejs") %>

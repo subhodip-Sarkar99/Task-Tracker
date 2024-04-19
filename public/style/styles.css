@@ -1,0 +1,485 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter",sans-serif;
+}
+body{
+    background:linear-gradient(40deg,#96E9C6,#83C0C1);
+}
+.top-nav h1{
+    font-family: "Poppins",arial;
+    font-weight: 900;
+    color:#96E9C6;
+    font-size: 2.5rem;
+    padding-left: 95px;
+    
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    height: 80px;
+    width: 100%;
+    background: #6C22A6;
+    overflow: hidden;
+    
+}
+.container .top-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    
+}
+.top-nav ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap :20px;
+    
+}
+.top-nav ul li a{
+    font-size: 1.5rem;
+    color: #96E9C6;
+    border: 2.5px solid whitesmoke;
+    border-radius: 50px;
+    padding: 10px;
+    font-weight: 500;
+    transition: all ease 1.1s;
+}
+.top-nav ul li a:hover{
+    text-decoration: underline;
+    background-color:#6f66bd;
+}
+
+
+.intro-container{
+    width: 100%;
+    height: 400px;
+
+}
+.intro-container h1{
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 8rem;
+    color: #6C22A6;
+}
+#wavy{
+    /*text-decoration: underline;*/
+    text-align: center;
+    font-family: "Poppins";
+    border-radius: 80px;
+    padding: 20px;
+    animation: rotate 3s infinite;
+    font-size: 7rem;
+    
+}
+
+@keyframes rotate{
+
+   
+    25%{
+        border-top: 5px solid #6f66bd;
+       
+    }
+    50%{
+        border-right: 5px solid #6f66bd;
+        
+    }
+    75%{
+        border-bottom: 5px solid #6f66bd;
+       
+    }
+    100%{
+        border-left: 5px solid #6f66bd;
+        
+    }
+}
+
+
+.cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    overflow: hidden;
+    
+}
+.container-cards{
+    display: flex;
+    width: 80vw;
+}
+.panel{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    border-radius: 50px;
+    color: #000000;
+    cursor: pointer;
+    flex: 0.5;
+    margin: 10px;
+    position: relative;
+    transition: all 700ms ease-in;
+}
+.panel h2{
+    font-family: "Poppins";
+    font-size: 45px;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    margin: 0;
+    opacity: 0;
+}
+.panel.active{
+    flex:5
+}
+.panel.active h2{
+    opacity: 1;
+    transition: opacity 0.3s ease-in 0.4s;
+}
+
+.get-started a{
+    
+    align-items: center;
+    border: 5px solid #6C22A6;
+    border-radius: 80px;
+    font-size: 1.5rem;
+    padding: 12px;
+    color: #6f66bd;
+    font-family: "Poppins";
+    font-weight: 400;
+    transition: all ease 1.5s;
+}
+.get-started a:hover{
+    background: #6C22A6;
+    color: aliceblue;
+}
+
+footer{
+   width: 100%;
+   height: 250px;
+   background-color: #6C22A6;
+   padding: 15px;
+}
+
+#foot-contents{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+    gap: 40px;
+    padding: 0 28px;
+    color:grey;
+}
+
+
+#foot-about{
+    flex:1;
+    padding-right: 35px;
+    
+}
+
+
+footer h3{
+    font-size: 1.2rem;
+    font-family: "Inter";
+    color:whitesmoke;
+}
+
+#foot-contents li a,#foot-contents p{
+    text-decoration: none;
+    color: grey;
+    font-size: 1rem;
+   
+    
+}
+#foot-contents li a:hover{
+    text-decoration: underline;
+    color: white;
+}
+
+#foot-socials li a svg{
+    margin: 4px;
+}
+#foot-socials li a svg:hover{
+    color:white;
+}
+
+#register{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.blackboard{
+    background-color: aliceblue;
+    height: 550px;
+    width: 800px;
+    border-radius: 60px;
+    box-shadow: 6px 6px 6px 6px rgba(172, 172, 172, 0.836);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-items {
+    width: 420px;
+    margin: 50px auto;
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
+}
+.form-items h2 {
+    font-family: "Inter";
+    font-size: 2rem;
+    text-align: center;
+    color: #333333;
+    margin-bottom: 20px;
+}
+input[type="email"], input[type="password"]{
+    width: calc(100% - 10px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    box-sizing: border-box;
+    font-family: "Poppins";
+    font-size: 1.2rem;
+    transition: border-color 0.3s ease;
+}
+input[type="email"]:focus, input[type="password"]:focus {
+    background-color:#6f66bd59;
+
+}
+input[type="submit"] {
+    background-color: #007bff;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    width: 97%;
+    margin-bottom: 15px;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+    
+}
+.form-items a{
+  margin: 35px;
+}
+.form-items a:hover{
+    text-decoration: underline;
+}
+
+.reg-logo img{
+    width: 300px;
+    height: 300px;
+    margin-left: 25px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: transparent;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.user-btns{
+    height: 80px;
+    width: 100%;
+    background-color: #6f66bd;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.user-btns #make-todo{
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #96E9C6;
+    padding: 5px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #6f66bd;
+    font-size: 1.6rem;
+}
+.user-btns a{
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #96E9C6;
+    padding:5px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    font-size: 1.6rem;
+}
+
+.user-btns a{
+    transition: all ease 0.3s;
+}
+.user-btns a:hover{
+    scale:1.2;
+    cursor: default;
+}
+.user-btns a:active{
+    scale:0.9;
+
+}
+.user-btns button{
+    transition:all ease 0.3s;
+}
+.user-btns button:hover{
+    scale:1.2;
+}
+.user-btns button:active{
+    scale:0.9;
+}
+
+/*hidden component to create todo styling*/
+#createtodo{
+    height: auto;
+    width: 500px;
+    background-color: #6f66bd;
+    margin: 20px;
+    margin-inline-start: 35%;
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+#createtodo #headtodo{
+    height: 80px;
+    width: 90%;
+    padding: 6px;
+    margin-top: 5px;
+    margin-left: 22px;
+    font-family: "Inter";
+    font-size: 28pt;
+    font-weight: 500;
+    border-radius: 50px;
+}
+.conatiner-todo #newTask{
+    padding: 8px;
+    font-size: 18pt;
+    
+}
+
+#newTask .newtasks{
+    height: 40px;
+    width: 90%;
+    padding: 6px;
+    margin-top: 16px;
+    margin-left: 22px;
+    font-family: "Poppins";
+    font-size: 18pt;
+    font-weight: 400;
+    border-radius: 40px;
+}
+.conatiner-todo .btn{
+    border-radius: 30px;
+    font-family: "Poppins";
+    padding: 5px;
+    background-color:transparent;
+    color: #96E9C6;
+    font-size: 12pt;
+    font-weight: 500;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border: 1px solid black;
+    margin: 10px;
+    margin-left: 40px;
+    margin-bottom: 5px;
+    transition: all ease 0.3s;
+}
+.conatiner-todo .btn:hover{
+    scale: 1.2;
+}
+.conatiner-todo .btn:active{
+    scale: 0.9;
+}
+/*end*/
+
+/*viewing todo*/
+.dateLbl{
+    width: 50%;
+    border-radius: 30px;
+    font-family: "Poppins";
+    padding: 5px;
+    background-color:transparent;
+    color: #96E9C6;
+    font-size: 12pt;
+    font-weight: 500;
+    margin-inline-start: 5%;
+}
+.itemLbl{
+    height: 30px;
+    color: #96E9C6;
+    font-family: "Poppins";
+    margin-left: 0;
+    
+}
+.todoHeading{
+    width: 50%;
+    border-radius: 30px;
+    font-family: "Poppins";
+    padding: 5px;
+    background-color:transparent;
+    color:#ccc;
+    font-size: 18pt;
+    font-weight: 500;
+    margin-inline-start: 25%;
+}
+
+.chkbox{
+    height: 20px;
+    width: 20px;
+    margin-left: 90px;
+}
+
+.getTodos{
+    width: 100%;
+    height: auto;
+    padding: 10px;
+    margin: 0;
+    background-color: #0056b3;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.getTodos #a{
+    border: 2px solid black;
+    border-radius: 10px;
+    color: #96E9C6;
+    padding: 6px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    background: #6f66bd;
+    font-size: 1.2rem;
+    margin-left: 18px;
+    margin-top: 5px;
+    transition: all ease 0.3s;
+}
+.getTodos #a:hover{
+    scale:1.2;
+}
+.getTodos #a:active{
+    scale:0.9;
+}
+
+/*.view-todo .createtodo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+
+
+
+

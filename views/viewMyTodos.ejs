@@ -1,0 +1,48 @@
+<%- include("partials/header.ejs") %>
+
+<section class="view-todo">
+<div class="user-btns">
+    <a href="/content" id="make-todo">Create New </a>
+    <a href="/logout">Logout</a>
+    
+</div>
+
+<%if(locals.titleArr){%>
+<div class="getTodos">
+    
+    <form action="/viewSpecified" method="POST" >
+        <%titleArr.forEach(title=>{%>
+        <button onclick="this.form.submit()" value="<%=title%>" name="whichTodo" id="a"><%=title%></button>
+        <% }); %>
+    </form>
+   
+   
+</div>
+
+<%}else if(locals.heading){%>
+
+<div id="createtodo">
+    
+    <div class="conatiner-todo">
+
+        <p class="dateLbl" hidden>date goes here</p>
+       
+        <p class=todoHeading><%=heading%></p>
+        <form action="/delete" method="POST" id="newTask">
+           
+
+            <%for(let item of todos){%>
+            <input type="checkbox" onchange="this.form.submit()" class="chkbox" value="<%= item.todo %>"name="checkVal">
+            <label name="todoHeading" id="headtodo" class="itemLbl"><%= item.todo %></label><br>
+            <%}%>
+            
+        </form>
+    </div>
+
+</div>
+<%}else{%>
+    <h1>Server down: We are working on the issue...</h1>
+    <%}%>
+</section>
+
+<%- include("partials/footer.ejs") %>

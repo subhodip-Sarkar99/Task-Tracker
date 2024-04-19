@@ -1,0 +1,51 @@
+
+<script>
+    const panels=document.querySelectorAll(".panel");
+
+function removeActiveClasses(){
+ panels.forEach((panel)=>{
+ panel.classList.remove("active");
+});
+}
+
+ panels.forEach((panel)=>{
+ panel.addEventListener("mouseover",()=>{
+ removeActiveClasses();
+ panel.classList.add("active");
+});
+});
+
+const scrollBtn = document.getElementById("scrollBtn");
+
+scrollBtn.addEventListener("click", () => {
+    window.scrollTo({
+        top: document.body.scrollHeight,
+        behavior: "smooth",
+    });
+});
+
+function showDiv() {
+  // Get the div element
+  var div = document.getElementById("createtodo");
+  // Toggle its display style
+  div.removeAttribute("hidden");
+}
+
+var lastCountValue=0;
+function createInp(){
+    var counter = document.querySelectorAll(`input[type="text"]`).length+1;
+    var newInp=document.createElement("input");
+    newInp.setAttribute("type","text");
+    newInp.setAttribute("name","inp");
+    newInp.placeholder="New Task...";
+    newInp.className="newtasks";
+    document.getElementById("newTask").appendChild(newInp);
+
+    lastCountValue=counter;
+    
+}
+
+
+</script>
+</body>
+</html>

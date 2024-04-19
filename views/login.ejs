@@ -1,0 +1,21 @@
+<%-include("partials/header.ejs")%>
+
+<section id="register">
+    <div class="blackboard">
+        <div class="reg-logo">
+            <img src="images/login-logo.jpg" alt="Register here"/>
+        </div>
+        <div class="form-items">
+            <h2>Login</h2>
+            <form action="/login" method="POST">
+                <input type="email" placeholder="Email" name="username" required>
+                <input type="password" placeholder="Password" name="password" required>
+                <input type="submit" value="Submit">    
+            </form>
+            <a href="/sign-up">Not Signed-Up? Click to Sign Up</a>
+        </div>
+
+    </div>
+</section>
+
+<%-include("partials/footer.ejs")%> 
